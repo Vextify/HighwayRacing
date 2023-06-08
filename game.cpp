@@ -185,8 +185,8 @@ simulate_game(Input* input, float dt) {
 		draw_text("START", -13, -10, 1, 0xFFF0B3);
 		
 		if (counter == 1) {
-			draw_text("YOU GOT A NEW HIGH SCORE: ", -32, 10, 0.4f, 0xffffff);
-			draw_number(high_score, 31, 8.9f, 0.5f, 0xbbffbb);
+			draw_text("YOU GOT A NEW HIGH SCORE: ", -29, 10, 0.4f, 0xffffff);
+			draw_number(high_score, 30, 4.9f, 0.5f, 0xbbffbb);
 		}
 		else {
 			draw_text("YOU GOT A NEW HIGH SCORE!", -34, 20, 0.4f, 0x00D1FF);			
