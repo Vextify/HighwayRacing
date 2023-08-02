@@ -101,7 +101,7 @@ simulate_ball(int num, float dt) {
 			high_score = score;
 		}
 	}
-	if (aabb_vs_aabb(ball_p_x, ball_p_y, ball_half_size_y - 5, ball_half_size_y - 5, car_p_x, car_p_y, car_half_size_x, car_half_size_y)) {
+	if (aabb_vs_aabb(ball_p_x, ball_p_y, ball_half_size_y - 5, ball_half_size_y - 5, car_p_x, car_p_y, car_half_size_x+5, car_half_size_y+5)) {
 		current_gamemode = GM_MENU;
 		ball_p_y = 30;
 		car_p_x = 0;
@@ -187,9 +187,11 @@ simulate_game(Input* input, float dt) {
 		if (counter == 1) {
 			draw_text("YOU GOT A NEW HIGH SCORE: ", -29, 10, 0.4f, 0xffffff);
 			draw_number(high_score, 30, 4.9f, 0.5f, 0xbbffbb);
+			score = 0;
 		}
 		else {
-			draw_text("YOU GOT A NEW HIGH SCORE!", -34, 20, 0.4f, 0x00D1FF);			
+			draw_text("YOU GOT A NEW HIGH SCORE!", -34, 20, 0.4f, 0x00D1FF);
+			score = 0;
 		}
 		draw_text("HIGHWAY", -29.9f, 40, 1.5f, 0xffffff);
 		draw_text("RACING!", -27.1f, 25, 1.5f, 0xffffff);
