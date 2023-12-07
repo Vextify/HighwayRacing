@@ -4,7 +4,7 @@
 
 
 float car_p_x, car_dp_x;
-float car_p_y, car_dp_y;
+float car_p_y = -20, car_dp_y;
 float arena_half_size_x = 35, arena_half_size_y = 48;
 float car_half_size_x = 3, car_half_size_y = 5;
 float ball_p_x, ball_p_y = 30, ball_dp_x, ball_dp_y = -30, ball_half_size_x = 3, ball_half_size_y = 5;
@@ -96,7 +96,7 @@ simulate_ball(int num, float dt) {
 		current_gamemode = GM_MENU;
 		ball_p_y = 30;
 		car_p_x = 0;
-		car_p_y = 0;
+		car_p_y = -20;
 		if (score > high_score) {
 			high_score = score;
 		}
@@ -105,7 +105,7 @@ simulate_ball(int num, float dt) {
 		current_gamemode = GM_MENU;
 		ball_p_y = 30;
 		car_p_x = 0;
-		car_p_y = 0;
+		car_p_y = -20;
 		if (score > high_score) {
 			high_score = score;
 			score = 0;
